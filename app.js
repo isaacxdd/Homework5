@@ -49,13 +49,11 @@ $(() => {
    $newWand.css('color', 'blue');
    
   
-  let $pet = $h4.next();
-  let $petLeash = $unorderedList.find('.owl');
-  $pet.detach().insertAfter($container);
-
-  
-  $pet.detach().insertAfter($h4);
-  $petLeash.appendTo($unorderedList)
+   let $insert = $('ul[storage="Trunk"] li:nth-child(4)');
+   $insert.detach();
+   $insert.insertBefore('ul[storage="Trunk"] li:nth-child(2)');
+   $insert.detach();
+   $insert.insertAfter('ul[storage="Trunk"] li:nth-child(4)');
 
   $('.secret').hide('slow').delay(2000);
 
@@ -63,7 +61,13 @@ $(() => {
     $('.secret').show('slow');
   }, 2000);
 
-  $petLeash.addClass('cabbage');
+  $insert.addClass('cabbage');
 
-  $petLeash.removeClass('cabbage');
+  $insert.removeClass('cabbage');
+
+  $("#container h5").text("Fall 2018");
+  $unorderedList.prepend($('<li>').text('Butter beer'));
+  $unorderedList.attr('storage', 'chest');
+
+
 });

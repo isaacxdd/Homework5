@@ -40,3 +40,17 @@ tr:nth-child(even) {
   background-color: rgba(18, 18, 19, 0.5);
   color: rgb(184, 189, 190);
 }
+
+img {
+  padding-top: 30px;
+  height: 400px;
+}
+
+#container {
+  background-color: rgb(205, 188, 188)
+}
+
+h1{
+  background-color: aliceblue;
+  font-style: italic;
+}
