@@ -15,7 +15,7 @@ $(() => {
   $unorderedList.append($('<li>').addClass('secret').text('magic map'));
   $unorderedList.append($('<li>').addClass('secret').text('time turner'));
   $unorderedList.append($('<li>').addClass('owl').text('leash'));
-  $unorderedList.append($('<li>').text('"Bertie Bott\'s Every Flavor [Jelly] Beans"'));
+  $unorderedList.append($('<li>').text('Bertie Bott\'s Every Flavor [Jelly] Beans'));
 
   $container.append($unorderedList);
 
@@ -46,9 +46,8 @@ $(() => {
   
   let $newWand = $('<h4>').text('Elder Wand').insertAfter($h4);
 
-  
-  $newWand.css('color', 'indigo');
-
+   $newWand.css('color', 'blue');
+   
   
   let $pet = $h4.next();
   let $petLeash = $unorderedList.find('.owl');
@@ -56,6 +55,15 @@ $(() => {
 
   
   $pet.detach().insertAfter($h4);
-  $petLeash.appendTo($unordered)
+  $petLeash.appendTo($unorderedList)
 
+  $('.secret').hide('slow').delay(2000);
+
+  setTimeout(() => {
+    $('.secret').show('slow');
+  }, 2000);
+
+  $petLeash.addClass('cabbage');
+
+  $petLeash.removeClass('cabbage');
 });

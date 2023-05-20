@@ -20,8 +20,23 @@ table,
 th,
 td {
   border: 1px solid gray;
+  border-collapse: collapse;
 }
 
 table {
   margin: 0 auto;
+}
+
+.cabbage {
+  color: CHARTREUSE;
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(112, 112, 125, 0.5);
+  color: aliceblue;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(18, 18, 19, 0.5);
+  color: rgb(184, 189, 190);
 }
